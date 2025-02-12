@@ -1,0 +1,327 @@
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+	font-family: "Freight";
+}
+html, body{
+	height: 100%;
+	width: 100%;
+}
+#main{
+	width: 100%;
+	background-color: black;
+}
+#loading{
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	position: fixed;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	z-index: 11;
+}
+#loading h1{
+	font-size: 5vw;
+	line-height: 5vw;
+	letter-spacing: -2px;
+	font-weight: 100;
+	position: relative;
+	z-index: 9;
+}
+#loading video{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	object-fit: cover;
+	z-index: 6;
+}
+.load-2{
+	height: 100vh;
+	width: 100%;
+	background-color: #F5E41B;
+	position: absolute;
+	z-index: 8;
+}
+.load-3{
+	height: 100vh;
+	width: 100%;
+	background-color: #F5E41B;
+	position: absolute;
+	z-index: 7;
+}
+.navbar{
+	display: flex;
+	background-color: #F5E41B;
+	justify-content: space-between;
+	padding: 30px 70px;
+}
+.navbar h2{
+	font-size: 2.5vw;
+	font-weight: bold;
+}
+.nav-links{
+	display: flex;
+	gap: 30px;
+}
+.nav-links a{
+	color: black;
+	font-size: 1.8vw;
+	font-weight: 300;
+	text-decoration: none;
+}
+.links h2 {
+            position: relative;
+            text-decoration: none; /* Remove default underline */
+}
+
+.links h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px; 
+            background-color: black; 
+            transform: scaleX(0); 
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in-out; 
+}
+
+.links h2:hover::after {
+            transform: scaleX(1); 
+}
+/*Page 1*/
+.page-1{
+	background-color: #F5E41B;
+}
+.page-1-data{
+	height: 82vh;
+	width: 100%;
+/*	background-color: #F5E41B;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.page-1-data h1{
+	font-size: 5vw;
+	line-height: 5vw;
+	letter-spacing: -2px;
+	font-weight: 100;
+}
+.links{
+	position: relative;
+	padding: 0px 40px;
+	bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.links h2 a{
+	font-size: 1.5vw;
+	text-decoration: none;
+	font-weight: 100;
+	text-transform: uppercase;
+	color: black;
+}
+/*Page-2*/
+.page-2{
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	color: white;
+	display: flex;
+	transition: all ease 0.5s;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+}
+.element{
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.element .blur{
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: linear-gradient(to right,#F5E41B ,#F5E41B,#f5e31bf6 );
+	box-shadow: 10px 0px 20px #F5E41B;
+	z-index: 8;
+}
+.element h2{
+	line-height: 7vw;
+	font-size: 7.5vw;
+	text-transform: uppercase;
+	font-weight: 100;
+	position: relative;
+	z-index: 99;
+	transition: h2 ease 0.5s;
+}
+.element:hover h2{
+	font-style: italic;
+}
+.element .move{
+	background-color: #F5E41B;
+	width: 100%;
+	white-space: nowrap;
+	padding: 8px 0;
+	position: absolute;
+	top: 50%;
+	transition: all 0.5s ease-in-out;
+	transform: translate(0, -50%) scale(0);
+}
+.element:hover .move{
+	transform: translate(0, -50%) scale(1);
+}
+.element .move .moving{
+	display: inline-block;
+	white-space: nowrap;
+	animation: moving 4s infinite linear;
+}
+.element .move .moving h5{
+	color: black;
+	font-weight: 300;
+	display: inline-block;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-right: 30px;
+}
+@keyframes moving{
+	from{
+		transform: translateX(0);
+	}
+	to{
+		transform: translateX(-100%);
+	}
+}
+.page-3{
+	min-height: 100vh;
+	width: 100%;
+	background-color: white;
+}
+.img-container{
+	padding: 30px;
+	display: flex;
+	align-items: flex-start;
+    flex-wrap: wrap;
+}
+.img-div{
+	width: 28vw;
+	height: 40vw;
+	position: relative;
+	margin: 20px;
+}
+.img-div img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.overlay{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: #0000001e;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s all ease;
+}
+.overlay p{
+	font-size: 2vw;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 20px;
+	color: transparent;
+	transition: 0.5s all ease;
+}
+.img-div:hover .overlay{
+	background-color: black;
+}
+.img-div:hover .overlay p{
+    color: white;
+}
+/*footer*/
+.top{
+	height: 18vh;
+	width: 100%;
+	color: black;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.top i{
+	cursor: pointer;
+	font-size: 50px;
+	font-weight: 100;
+}
+.top h2{
+	font-weight: 100;
+	font-size: 2vw;
+	letter-spacing: -1.5px;
+}
+footer{
+	padding: 0px 40px;
+	height: 20vh;
+	width: 100%;
+	background-color: black;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+footer .f-text{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+footer h2{
+	font-weight: 100;
+}
+.f-text a{
+	text-decoration: none;
+	color: white;
+	gap: 12px;
+}
+.f-text h2{
+	margin-left: 12px;
+	font-weight: 100;
+}
+ .f-text h2 {
+            position: relative;
+            text-decoration: none; /* Remove default underline */
+        }
+
+        .f-text h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px; 
+            background-color: white; 
+            transform: scaleX(0); 
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .f-text h2:hover::after {
+            transform: scaleX(1); /*
+        }
+
+ 
